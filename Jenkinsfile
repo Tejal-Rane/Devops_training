@@ -13,6 +13,8 @@ pipeline {
 
                     // Write a useless file, which is not needed to be archived.
                     writeFile file: "output/uselessfile.md", text: "This file is useless, no need to archive it."
+
+                    emailext body: 'trail mail', subject: 'hello', to: 'tejal28rane@gmail.com'
                 }
             }
         }
@@ -30,11 +32,7 @@ pipeline {
                       ok: 'Continue'
             }
         }
-       stage('Interactive input') {
-            steps {
-                emailext body: 'trail mail', subject: 'hello', to: 'tejal28rane@gmail.com'
-            }
-        }
+       
         
     }
 }
