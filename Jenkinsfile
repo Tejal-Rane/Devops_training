@@ -30,5 +30,11 @@ pipeline {
                       ok: 'Continue'
             }
         }
+       stage('Interactive input') {
+            steps {
+                emailext body: 'trail mail', subject: 'hello', to: 'tejal28rane@gmail.com'
+            }
+        }
+        
     }
 }
