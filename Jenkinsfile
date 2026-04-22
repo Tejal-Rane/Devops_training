@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Create build output') {
+        stage('Create build outputs') {
             steps {
                 script {
                     // Make the output directory.
